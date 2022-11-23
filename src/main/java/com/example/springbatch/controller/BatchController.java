@@ -28,7 +28,7 @@ public class BatchController {
 	@RequestMapping("/exectute")
 	public void executeJobLauncher() throws JobExecutionAlreadyRunningException, JobRestartException, JobInstanceAlreadyCompleteException, JobParametersInvalidException {
 		JobParameters jobParameters = new JobParametersBuilder()
-				.addString("JobName", "XmlJob2")
+				.addString("JobName", "XmlJob")
                 .toJobParameters();
 		JobExecution jobExecution = jobLauncher.run(helloWorlJob, jobParameters);
 		JobInstance jobInstance = jobExecution.getJobInstance();
